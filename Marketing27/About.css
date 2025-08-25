@@ -1,0 +1,498 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: black;
+    color: #fff;
+}
+
+/* Navigation Bar (same as other pages) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Constrain the logo image to a square */
+.logo-image {
+    width: 50px; /* Adjust the size as needed */
+    height: 50px; /* Ensures the image is a square */
+    object-fit: contain; /* Ensures the image scales properly without distortion */
+    display: block; /* Removes any inline spacing issues */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: #b0b0b0;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+.nav-links a.active {
+    color: #ffffff;
+    font-weight: 600;
+}
+.cta-btn {
+    padding: 10px 20px;
+    background: transparent;
+    border: 2px solid #A3CFFA;
+    color: #A3CFFA;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(163, 207, 250, 0.5), 0 0 20px rgba(163, 207, 250, 0.3);
+}
+
+.cta-btn:hover {
+    background: #A3CFFA;
+    color: #1A1A1A;
+    box-shadow: 0 0 15px rgba(163, 207, 250, 0.7), 0 0 30px rgba(163, 207, 250, 0.5), 0 0 45px rgba(163, 207, 250, 0.3);
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 10px;
+    }
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .nav-links li {
+        margin: 10px 0 0 0;
+    }
+}
+/* Hero Section */
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center;
+    position: relative;
+    background-color: #000000;
+    background-attachment: fixed;
+    overflow: hidden;
+    font-family: 'Playfair Display', serif;
+    box-shadow: 0 0 15px rgba(163, 207, 250, 0.7), 0 0 30px rgba(163, 207, 250, 0.4);
+}
+
+.hero h1 {
+    font-size: 64px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+.hero p {
+    font-size: 20px;
+    font-weight: 300;
+    color: #b0b0b0;
+    margin-bottom: 30px;
+    font-family: 'Playfair Display', serif;
+}
+
+.hero .cta-btn {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 18px;
+}
+.hero .cta-btn:hover {
+    background: #A3CFFA;
+    color: #1A1A1A;
+}
+/* Our Story Section */
+.story-section {
+    padding: 100px 50px;
+    text-align: center;
+    background: black;
+}
+
+.story-section h2 {
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+.story-section p {
+    font-size: 18px;
+    font-weight: 300;
+    color: #b0b0b0;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Base container */
+.about-section {
+  background-color: #0a0a0a; /* matches your dark site theme */
+  color: #e0e0e0;
+  padding: 80px 20px;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.7;
+}
+
+.about-section .container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Headings */
+.about-section h2 {
+  font-size: 2.5rem;
+  color: #a3cffa;
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: 'Playfair Display', serif;
+}
+
+.about-section h3 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.about-section h3::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #a3cffa;
+  margin-top: 8px;
+}
+
+/* Paragraphs */
+.about-section p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #d0d0d0;
+}
+
+/* List Styling */
+.about-section ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 20px;
+}
+
+.about-section li {
+  margin-bottom: 12px;
+  padding-left: 24px;
+  position: relative;
+  font-size: 1rem;
+}
+
+.about-section li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: #a3cffa;
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-section h2 {
+    font-size: 2rem;
+  }
+
+  .about-section h3 {
+    font-size: 1.3rem;
+  }
+
+  .about-section p,
+  .about-section li {
+    font-size: 0.95rem;
+  }
+}
+
+
+/* Our Values Section */
+.values-section {
+    padding: 100px 50px;
+    text-align: center;
+    background: black;
+}
+
+.values-section h2 {
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    font-family: 'Playfair Display', serif;
+}
+
+.values-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.value-card {
+    background: #2A2A2A;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+}
+
+.value-card .icon {
+    font-size: 40px;
+    color: #A3CFFA;
+    margin-bottom: 15px;
+}
+
+.value-card h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.value-card p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #fff;
+}
+
+/* CTA Banner */
+.cta-banner {
+    padding: 100px 50px;
+    text-align: center;
+    background: black;
+    box-shadow: 0 0 15px rgba(163, 207, 250, 0.7), 0 0 30px rgba(163, 207, 250, 0.4);
+}
+
+.cta-banner h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #ffffff;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Dark overlay */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto; /* Allow scrolling on the modal itself if needed */
+}
+
+.modal-content {
+    background: #1A1A1A;
+    padding: 40px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    max-height: 80vh; /* Limit the height to 80% of the viewport height */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+    margin: 20px 0; /* Add margin to prevent sticking to the top/bottom on small screens */
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    color: #A3CFFA;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #fff;
+}
+
+.modal-content h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.modal-content p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #A3CFFA;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 5px;
+    color: #fff; /* Ensure label color matches the theme */
+}
+
+.form-group label .required {
+    color: #A3CFFA;
+}
+
+/* Style all inputs and textarea consistently */
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    background: #2A2A2A;
+    border: 1px solid #A3CFFA;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    width: 100%; /* Ensure inputs take full width */
+    box-sizing: border-box; /* Prevent padding from affecting width */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #fff;
+    box-shadow: 0 0 5px rgba(163, 207, 250, 0.5);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Button Styles (match the "Get Started" button) */
+.submit-btn {
+    padding: 10px 20px;
+    background: transparent;
+    border: 2px solid #A3CFFA;
+    color: #A3CFFA;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+    width: fit-content; /* Ensure button width adjusts to content */
+    align-self: center; /* Center the button */
+}
+
+.submit-btn:hover {
+    background: #A3CFFA;
+    color: #1A1A1A;
+}
+
+.submit-btn:focus {
+    outline: 3px solid #A3CFFA;
+    outline-offset: 3px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .story-section h2,
+    .team-section h2,
+    .values-section h2 {
+        font-size: 32px;
+    }
+
+    .story-section p {
+        font-size: 16px;
+    }
+
+    .team-card,
+    .value-card {
+        max-width: 100%;
+    }
+
+    .team-card h3,
+    .value-card h3 {
+        font-size: 20px;
+    }
+
+    .team-image-placeholder {
+        height: 150px;
+    }
+
+    .modal-content {
+        padding: 20px;
+        width: 95%;
+        max-height: 70vh; /* Slightly smaller on mobile */
+    }
+
+    .modal-content h2 {
+        font-size: 24px;
+    }
+
+    .modal-content p {
+        font-size: 14px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 14px;
+    }
+
+    .submit-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}

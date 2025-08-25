@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing27 - Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar (same as Home and Services pages) -->
+    <nav class="navbar">
+        <div class="logo"> 
+            <a href="index.html"> <img src="logo.png" alt="Marketing27 Logo" class="logo-image">
+        </a> </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="cta-btn contact-trigger" aria-label="Get Started">Get Started</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Contact Us</h1>
+        <p>Ready to elevate your business? Let’s connect and discuss your goals!</p>
+        <button class="cta-btn contact-trigger" aria-label="Contact Us">Contact Us</button>
+    </section>
+
+    <!-- Contact Us Modal -->
+    <div class="modal" id="contact-modal">
+        <div class="modal-content">
+            <span class="close-btn" aria-label="Close Contact Form">×</span>
+            <h2>Contact Us</h2>
+            <p>Let’s discuss how we can elevate your business. Fill out the form below!</p>
+            <form id="contact-form" action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Name <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone <span class="required">*</span></label>
+                    <input type="tel" id="phone" name="phone" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="company">Company Name </label>
+                    <input type="text" id="company" name="company">
+                </div>
+                <div class="form-group">
+                    <label for="website">Website URL </label>
+                    <input type="url" id="website" name="website">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message <span class="required">*</span></label>
+                    <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="contact.js"></script>
+</body>
+</html>

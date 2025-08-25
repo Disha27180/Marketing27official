@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | Marketing27</title>
+    <link rel="stylesheet" href="pricing.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+ <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo.png" alt="Marketing27 Logo" class="logo-image">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="cta-btn contact-trigger" aria-label="Get Started">Get Started</a>
+    </nav>
+
+   <main> 
+  <section class="pricing-hero">
+    <h1>Our Pricing Plans</h1>
+    <p>Simple, transparent, and designed for your growth.</p>
+  </section>
+
+  <section class="pricing-table-section">
+    <div class="pricing-table-wrapper">
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Plan 1<br><span class="price">&#163;1299</span></th>
+            <th>Plan 2<br><span class="price">&#163;1599</span></th>
+            <th>Plan 3<br><span class="price">&#163;2399</span></th>
+            <th>Custom<br><span class="price">Contact Us</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Brand Audit & Strategy</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+          </tr>
+          <tr>
+            <td>Social Media Management</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+          </tr>
+          <tr>
+            <td>Content Creation</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+          </tr>
+          <tr>
+            <td>SEO Optimization</td>
+            <td>&#10007;</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+          </tr>
+          <tr>
+            <td>Ad Campaign Management</td>
+            <td>&#10007;</td>
+            <td>&#10007;</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+          </tr>
+          <tr>
+            <td>Monthly Analytics Report</td>
+            <td>&#10007;</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+          </tr>
+          <tr>
+            <td>Dedicated Account Manager</td>
+            <td>&#10007;</td>
+            <td>&#10007;</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+          </tr>
+          <tr>
+            <td>Custom Solutions</td>
+            <td>&#10007;</td>
+            <td>&#10007;</td>
+            <td>&#10007;</td>
+            <td>&#10003;</td>
+          </tr>
+        </tbody>
+      </table>
+  </section>
+</main>
+
+ <!-- CTA Banner -->
+    <section class="cta-banner">
+        <h2>Ready to Grow Your Brand?</h2>
+        <button class="cta-btn contact-trigger" aria-label="Open Contact Form">Contact Us Today</button>
+    </section>
+
+     <!-- Contact Us Modal -->
+<div class="modal" id="contact-modal">
+    <div class="modal-content">
+        <span class="close-btn" aria-label="Close Contact Form">×</span>
+        <h2>Contact Us</h2>
+        <p>Let’s discuss how we can elevate your business. Fill out the form below!</p>
+        <form id="contact-form" action="#" method="POST">
+            <div class="form-group">
+                <label for="name">Name <span class="required">*</span></label>
+                <input type="text" id="name" name="name" required aria-required="true">
+            </div>
+            <div class="form-group">
+                <label for="email">Email <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required aria-required="true">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone <span class="required">*</span></label>
+                <input type="tel" id="phone" name="phone" required aria-required="true">
+            </div>
+            <div class="form-group">
+                <label for="company">Company Name </label>
+                <input type="text" id="company" name="company" required aria-required="true">
+            </div>
+            <div class="form-group">
+                <label for="website">Website URL </label>
+                <input type="url" id="website" name="website">
+            </div>
+            <div class="form-group">
+                <label for="message">Message <span class="required">*</span></label>
+                <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </div>
+</div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Marketing27. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="pricing.js"></script>

@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #1A1A1A;
+    color: #fff;
+}
+
+/* Navigation Bar (same as Home and Services pages) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Constrain the logo image to a square */
+.logo-image {
+    width: 50px; /* Adjust the size as needed */
+    height: 50px; /* Ensures the image is a square */
+    object-fit: contain; /* Ensures the image scales properly without distortion */
+    display: block; /* Removes any inline spacing issues */
+}
+
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: #b0b0b0;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+
+.cta-btn {
+    padding: 10px 20px;
+    background: transparent;
+    border: 2px solid #A3CFFA;
+    color: #A3CFFA;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(163, 207, 250, 0.5), 0 0 20px rgba(163, 207, 250, 0.3);
+}
+
+.cta-btn:hover {
+    background: #A3CFFA;
+    color: #1A1A1A;
+    box-shadow: 0 0 15px rgba(163, 207, 250, 0.7), 0 0 30px rgba(163, 207, 250, 0.5), 0 0 45px rgba(163, 207, 250, 0.3);
+}
+.hero .cta-btn {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 18px;
+}
+.hero .cta-btn:hover {
+    background: #A3CFFA;
+    color: #1A1A1A;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 10px;
+    }
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .nav-links li {
+        margin: 10px 0 0 0;
+    }
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    background-color: black; /* Fallback for unsupported browsers */
+    box-shadow: 0 0 15px rgba(163, 207, 250, 0.7), 0 0 30px rgba(163, 207, 250, 0.5), 0 0 45px rgba(163, 207, 250, 0.3);
+}
+
+.hero h1 {
+    font-size: 64px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-family: playfair; /* Ensure the font is loaded correctly */
+}
+
+.hero p {
+    font-size: 20px;
+    font-weight: 300;
+    color: #b0b0b0;
+    margin-bottom: 30px;
+    font-family: playfair; /* Ensure the font is loaded correctly */
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Dark overlay */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto; /* Allow scrolling on the modal itself if needed */
+}
+
+.modal-content {
+    background: #1A1A1A;
+    padding: 40px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    max-height: 80vh; /* Limit the height to 80% of the viewport height */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+    margin: 20px 0; /* Add margin to prevent sticking to the top/bottom on small screens */
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    color: #A3CFFA;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #fff;
+}
+
+.modal-content h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.modal-content p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #A3CFFA;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 5px;
+    color: #fff; /* Ensure label color matches the theme */
+}
+
+.form-group label .required {
+    color: #A3CFFA;
+}
+
+/* Style all inputs and textarea consistently */
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    background: #2A2A2A;
+    border: 1px solid #A3CFFA;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    width: 100%; /* Ensure inputs take full width */
+    box-sizing: border-box; /* Prevent padding from affecting width */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #fff;
+    box-shadow: 0 0 5px rgba(163, 207, 250, 0.5);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Button Styles (match the "Get Started" button) */
+.submit-btn {
+    padding: 10px 20px;
+    background: transparent;
+    border: 2px solid #A3CFFA;
+    color: #A3CFFA;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+    width: fit-content; /* Ensure button width adjusts to content */
+    align-self: center; /* Center the button */
+}
+
+.submit-btn:hover {
+    background: #A3CFFA;
+    color: #1A1A1A;
+}
+
+.submit-btn:focus {
+    outline: 3px solid #A3CFFA;
+    outline-offset: 3px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .modal-content {
+        padding: 20px;
+        width: 95%;
+        max-height: 70vh; /* Slightly smaller on mobile */
+    }
+
+    .modal-content h2 {
+        font-size: 24px;
+    }
+
+    .modal-content p {
+        font-size: 14px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 14px;
+    }
+
+    .submit-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+        
+    }
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing27 - About Us</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar (same as other pages) -->
+    <nav class="navbar">
+        <div class="logo"> 
+            <a href="index.html"> <img src="logo.png" alt="Marketing27 Logo" class="logo-image">
+        </a> </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="cta-btn contact-trigger" aria-label="Get Started">Get Started</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>About Us</h1>
+        <p>Learn more about our mission, vision, and the team driving your organic growth.</p>
+        <button class="cta-btn contact-trigger" aria-label="Contact Us">Contact Us</button>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="story-section">
+        <h2>Our Story</h2>
+        <p>Marketing27 was founded with a simple yet powerful idea: to help businesses grow authentically in a digital world. As a startup, we understand the challenges of building a brand from the ground up. That’s why we’re committed to delivering innovative, organic marketing solutions that drive real results. Our journey began with a passion for creativity and a belief that every brand has a unique story to tell—we’re here to help you tell yours and to help you stand out in a populated market.</p>
+    </section>
+
+    <section id="about" class="about-section">
+  <div class="container">
+    <h2>About Marketing27</h2>
+    <p>
+      At Marketing27, we're not just a digital marketing agency—we're a creative force dedicated to bridging the gap between emotion and brand identity. Based in London, we specialize in helping startups and small businesses tell their stories, connect authentically, and grow fearlessly.
+    </p>
+    <p>
+      We believe marketing should be human-first, intuitive, and efficient. That’s why our solutions combine strategic thinking, compelling storytelling, and clean design—without overcomplicating things.
+    </p>
+    <h3>Our Mission</h3>
+    <p>
+      To empower brands of all sizes to rise above the noise by delivering campaigns that feel personal, authentic, and impactful.
+    </p>
+    <h3>How We Work</h3>
+    <p>
+      We work fast, stay transparent, and collaborate closely with you from day one. Every project is tailored, every video crafted with purpose, and every strategy driven by data and creativity in equal measure.
+    </p>
+    <h3>Why Choose Marketing27?</h3>
+    <ul>
+      <li>✔ Fast turnaround and agile execution</li>
+      <li>✔ Transparent pricing with no hidden costs</li>
+      <li>✔ Emotionally engaging visuals and messaging</li>
+      <li>✔ Ideal for startups, local businesses, and new brands</li>
+    </ul>
+    <p>
+      We’re not here to impress with jargon—we’re here to build results that speak for themselves. Let’s make marketing feel real again.
+    </p>
+  </div>
+</section>
+
+
+    <!-- Our Values Section -->
+    <section class="values-section">
+        <h2>Our Values</h2>
+        <div class="values-container">
+            <div class="value-card">
+                <i class="fas fa-lightbulb icon" aria-label="Innovation Icon"></i>
+                <h3>Innovation</h3>
+                <p>We stay ahead of trends to deliver cutting-edge marketing solutions.</p>
+            </div>
+            <div class="value-card">
+                <i class="fas fa-heart icon" aria-label="Authenticity Icon"></i>
+                <h3>Authenticity</h3>
+                <p>We believe in building genuine connections between brands and audiences.</p>
+            </div>
+            <div class="value-card">
+                <i class="fas fa-rocket icon" aria-label="Growth Icon"></i>
+                <h3>Growth</h3>
+                <p>Your success is our priority—we’re here to help you grow sustainably.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+        <h2>Ready to Grow Your Brand?</h2>
+        <button class="cta-btn contact-trigger" aria-label="Open Contact Form">Contact Us Today</button>
+    </section>
+
+    <!-- Contact Us Modal -->
+    <div class="modal" id="contact-modal">
+        <div class="modal-content">
+            <span class="close-btn" aria-label="Close Contact Form">×</span>
+            <h2>Contact Us</h2>
+            <p>Let’s discuss how we can elevate your business. Fill out the form below!</p>
+            <form id="contact-form" action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Name <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone <span class="required">*</span></label>
+                    <input type="tel" id="phone" name="phone" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="company">Company Name </label>
+                    <input type="text" id="company" name="company" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="website">Website URL </label>
+                    <input type="url" id="website" name="website">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message <span class="required">*</span></label>
+                    <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="About.js"></script>
+</body>
+</html>

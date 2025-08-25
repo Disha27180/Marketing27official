@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing27 - Blogs</title>
+    <link rel="stylesheet" href="resources.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo"> 
+            <a href="index.html"><img src="logo.png" alt="Marketing27 Logo" class="logo-image"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="cta-btn contact-trigger" aria-label="Get Started">Get Started</button>
+    </nav>
+
+    <!-- Blogs Hero Section -->
+    <section class="hero">
+        <h1>Our Blogs</h1>
+        <p>Actionable insights, trends, and ideas to elevate your marketing game.</p>
+        <button class="cta-btn contact-trigger" aria-label="Contact Us">Contact Us</button>
+    </section>
+
+    
+    <!-- Blogs boxes -->
+   <section class="blog-list-section">
+
+  <h2 class="section-heading">Blog List</h2>
+  <div class="resources-container">
+    <div class="blog-box">
+      <h3>How to Grow Your Brand Organically</h3>
+      <p>
+        Discover actionable strategies to increase your brand’s reach and engagement without paid ads. Learn about content marketing, SEO, and community building.
+      </p>
+    <a href="blogs/blog1.html" class="read-more-link">Read More →</a>
+    </div>
+    <div class="blog-box">
+      <h3>Case Study: Social Media Success</h3>
+      <p>
+        See how a small business leveraged Instagram and TikTok to double their sales in six months. Key takeaways and tips included!
+      </p>
+      <a href="blogs/blog2.html" class="read-more-link">Read More →</a>
+    </div>
+    <!-- Add more blog-box divs as needed -->
+  </div>
+</section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+        <h2>Want to Feature Your Brand?</h2>
+        <button class="cta-btn contact-trigger" aria-label="Open Contact Form">Let’s Talk</button>
+    </section>
+    
+<div class="brands-featured-section">
+  <div class="brands-featured-title">Our team has worked with</div>
+  <div class="brands-marquee-outer">
+    <div class="brands-marquee-inner">
+      <span class="brand-name">Abhinav Khatri Films</span>
+      <span class="brand-name">D'lite Pizza</span>
+      <span class="brand-name">TFL</span>
+      <span class="brand-name">Marks & Spencer</span>
+      <span class="brand-name">Kia Motors</span>
+        <span class="brand-name">Abhinav Khatri Films</span>
+        <span class="brand-name">D'lite Pizza</span>
+        <span class="brand-name">TFL</span>
+        <span class="brand-name">Marks & Spencer</span>
+        <span class="brand-name">Kia Motors</span>
+    </div>
+  </div>
+</div>
+
+    <!-- Case Studies Section -->
+    <section class="case-studies-section">
+        <h2>Case Studies</h2>
+        <div class="case-studies-container" id="case-studies-container">
+            <!-- Example Case Study Card -->
+            <div class="case-study-card">
+                <h3>Boosting Local Visibility for D'lite Pizza</h3>
+                <p>How we helped a new vegetarian pizza cafe attract 500+ customers in the first month.</p>
+                <a href="#" class="view-details">View Details →</a>
+            </div>
+            <!-- Additional case study cards will be dynamically or statically added -->
+        </div>
+    </section>
+
+     <!-- Contact Us Modal -->
+    <div class="modal" id="contact-modal">
+        <div class="modal-content">
+            <span class="close-btn" aria-label="Close Contact Form">×</span>
+            <h2>Contact Us</h2>
+            <p>Let’s discuss how we can elevate your business. Fill out the form below!</p>
+            <form id="contact-form" action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Name <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone <span class="required">*</span></label>
+                    <input type="tel" id="phone" name="phone" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="company">Company Name </label>
+                    <input type="text" id="company" name="company">
+                </div>
+                <div class="form-group">
+                    <label for="website">Website URL </label>
+                    <input type="url" id="website" name="website">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message <span class="required">*</span></label>
+                    <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Marketing27. All rights reserved.</p>
+    </footer>
+    </body>
+<script src="resources.js"></script>
+
+  
+</html>

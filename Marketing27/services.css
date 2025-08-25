@@ -1,0 +1,538 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: black;
+    color: #fff;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    position: sticky;
+    top: 0;
+    background: transparent;
+    z-index: 100;
+}
+
+.logo {
+    text-decoration: none
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 10px;
+    }
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .nav-links li {
+        margin: 10px 0 0 0;
+    }
+}
+
+/* Constrain the logo image to a square */
+.logo-image {
+    width: 50px; /* Adjust the size as needed */
+    height: 50px; /* Ensures the image is a square */
+    object-fit: contain; /* Ensures the image scales properly without distortion */
+    display: block; /* Removes any inline spacing issues */
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.nav-links a.active {
+    font-weight: 600;
+}
+
+.cta-btn {
+    padding: 10px 20px;
+    background: transparent;
+    border: 2px solid #A3CFFA;
+    color: #A3CFFA;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    box-shadow: 0 0 10px rgba(163, 207, 250, 0.5), 0 0 20px rgba(163, 207, 250, 0.3);
+}
+
+.cta-btn:hover {
+    background: #A3CFFA;
+    color: #1A1A1A;
+    box-shadow: 0 0 15px rgba(163, 207, 250, 0.7), 0 0 30px rgba(163, 207, 250, 0.5), 0 0 45px rgba(163, 207, 250, 0.3);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #000000;
+    position: relative;
+    background-attachment: fixed;
+    overflow: hidden;
+    transform: translateY(-10%);
+    box-shadow: 0 5px 30px rgba(163, 207, 250, 0.7);
+}
+
+
+.hero h1 {
+    font-size: 64px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-family: playfair display;
+}
+
+.hero p {
+    font-size: 20px;
+    font-weight: 300;
+    color: #b0b0b0;
+    font-family: playfair display;
+    margin-bottom: 30px;
+    max-width: 800px;
+}
+
+.hero .cta-btn {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-family: playfair display;
+    font-weight: 600;
+    margin-bottom: 30px;
+    max-width: 800px;
+}
+.hero .cta-btn:hover {
+    background: #A3CFFA;
+    color: #1A1A1A;
+}
+
+/* Background Text */
+.background-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.service-text {
+    position: absolute;
+    font-size: 14px; /* Tiny text */
+    font-weight: 300;
+    color: #A3CFFA;
+    opacity: 0.1; /* Blends with the black background when not blinking */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: blink 14s infinite; /* 14s total cycle (2s per service for 7 services) */
+}
+
+/* Position each service text randomly */
+.service-text:nth-child(1) { top: 15%; left: 20%; animation-delay: 0s; }
+.service-text:nth-child(2) { top: 25%; left: 70%; animation-delay: 2s; }
+.service-text:nth-child(3) { top: 30%; left: 30%; animation-delay: 4s; }
+.service-text:nth-child(4) { top: 45%; left: 80%; animation-delay: 6s; }
+.service-text:nth-child(5) { top: 55%; left: 15%; animation-delay: 8s; }
+.service-text:nth-child(6) { top: 65%; left: 75%; animation-delay: 10s; }
+.service-text:nth-child(7) { top: 75%; left: 40%; animation-delay: 12s; }
+
+/* Blinking animation */
+@keyframes blink {
+    0%, 10% { opacity: 0.8; } /* Blink on */
+    15%, 100% { opacity: 0.1; } /* Fade back to blend with background */
+}
+
+
+/* Scroll Down Arrow */
+.scroll-down {
+    position: absolute;
+    bottom: 50px;
+    font-size: 2rem;
+    animation: bounce 2s infinite;
+    z-index: 3;
+}
+
+.scroll-down span {
+    color: #a3cffa;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes glow {
+    0% {
+        opacity: 0.5;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(100%);
+    }
+}
+
+
+/* Service Sections */
+.services {
+    padding: 50px 0;
+    font-family: playfair display;
+    background: black;
+}
+
+.service-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 0 50px;
+    font-family: playfair display;
+    color: #fff;
+    overflow: hidden;
+}
+
+.h2 
+{ font-family: playfair display; }
+
+.service-icon {
+    position: absolute;
+    font-size: 50px;
+    color: #A3CFFA;
+    opacity: 0.3;
+    z-index: 1;
+    animation: glow 6s infinite alternate; /* Increased duration from 2s to 4s */
+    transition: all 0.5s ease;
+    animation: glow 6s infinite alternate;
+    width: 100%;
+    height: 100%;
+    
+}
+.service-icon.visible,
+.service-content.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.service-content {
+    text-align: center;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    animation: fadeInUp 1s forwards;
+}
+
+.service-content.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.service-content h2 {
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-family: playfair display;
+}
+
+.service-content p {
+    font-size: 18px;
+    font-weight: 300;
+    color: #b0b0b0;
+    margin-bottom: 30px;
+    text-align: center;
+max-width: 800px;
+margin: 0 auto;
+font-family: playfair display; 
+}
+
+.learn-more {
+    padding: 10px 20px;
+    background: transparent;
+    border: 2px solid #A3CFFA;
+    color: #A3CFFA;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.learn-more:hover {
+    background: #A3CFFA;
+    color: #1A1A1A;
+}
+
+/* Background Icons for Service Sections */
+.background-icons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 0;
+    
+}
+
+.background-icons .icon {
+    font-size: 60px;
+    opacity: 0.2;
+}
+
+.background-icons .icon:nth-child(1) { top: 10%; left: 15%; animation-delay: 0s; }
+.background-icons .icon:nth-child(2) { top: 70%; left: 80%; animation-delay: 2s; }
+.background-icons .icon:nth-child(3) { top: 40%; left: 30%; animation-delay: 4s; }
+
+/* Accessibility: Focus Styles */
+.cta-btn:focus, .learn-more:focus {
+    outline: 3px solid #A3CFFA;
+    outline-offset: 3px;
+}
+
+
+/* CTA Banner */
+.cta-banner {
+    padding: 100px 50px;
+    text-align: center;
+    background: black;
+}
+
+.cta-banner h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #ffffff;
+    font-family: playfair display;
+    font-weight: 700;
+}
+
+
+/* Animations for icons??????? */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes glow {
+    0% {
+        opacity: 0.5;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(100%);
+    }
+}
+
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Dark overlay */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto; /* Allow scrolling on the modal itself if needed */
+}
+
+.modal-content {
+    background: #1A1A1A;
+    padding: 40px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    max-height: 80vh; /* Limit the height to 80% of the viewport height */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+    margin: 20px 0; /* Add margin to prevent sticking to the top/bottom on small screens */
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    color: #A3CFFA;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #fff;
+}
+
+.modal-content h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.modal-content p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #A3CFFA;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 5px;
+    color: #fff; /* Ensure label color matches the theme */
+}
+
+.form-group label .required {
+    color: #A3CFFA;
+}
+
+/* Style all inputs and textarea consistently */
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    background: #2A2A2A;
+    border: 1px solid #A3CFFA;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    width: 100%; /* Ensure inputs take full width */
+    box-sizing: border-box; /* Prevent padding from affecting width */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #fff;
+    box-shadow: 0 0 5px rgba(163, 207, 250, 0.5);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Button Styles (match the "Get Started" button) */
+.submit-btn {
+    padding: 10px 20px;
+    background: transparent;
+    border: 2px solid #A3CFFA;
+    color: #A3CFFA;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+    width: fit-content; /* Ensure button width adjusts to content */
+    align-self: center; /* Center the button */
+}
+
+.submit-btn:hover {
+    background: #A3CFFA;
+    color: #1A1A1A;
+}
+
+.submit-btn:focus {
+    outline: 3px solid #A3CFFA;
+    outline-offset: 3px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .modal-content {
+        padding: 20px;
+        width: 95%;
+        max-height: 70vh; /* Slightly smaller on mobile */
+    }
+
+    .modal-content h2 {
+        font-size: 24px;
+    }
+
+    .modal-content p {
+        font-size: 14px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 14px;
+    }
+
+    .submit-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+        
+    }
+}
